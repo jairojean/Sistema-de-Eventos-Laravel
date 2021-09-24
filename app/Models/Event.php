@@ -11,6 +11,19 @@ class Event extends Model
 
     protected $dates = ['date'];
     protected $casts= ['items' => 'array'];
-    protected $fillable = ['id','title','descrition','city','district','image','vip','items','date'];
+    protected $fillable = ['id','title','descrition','city','district','image','vip','items','date','user_id'];
  
+    
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
+     
+    public function users(){
+        return $this->belongsToMany('App\Models\User');
+    }
+
+    
+    protected $guarded = [];
+
+
 }

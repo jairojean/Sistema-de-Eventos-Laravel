@@ -45,12 +45,14 @@
                         <a class="nav-link" href="{{ route('event.create') }}">Criar Evento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">DashBoard</a>
+                        <a class="nav-link" href="/home">DashBoard</a>
                     </li>
+                    <li>
                      <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-                        Sair
+                         Sair
                     </a>
+                    </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

@@ -22,19 +22,16 @@
     <div id="cards-container" class="row">
         @foreach($events as $e)
         <div class="card col-md-3">
-            <img src="/img/show1.jpg" alt="{{ $e->title }}">
+        <img src="/img/events/{{$e->image}}" alt="{{$e->title}}">
             <div class="card-body">
                 <p class="card-date"> {{ date('d/m/y'), strtotime($e->date) }}</p>
                 <h5 class="card-title"> {{ $e->title }}</h5>
-                <p class="card-participants">X Participantes</p>
+                <p class="card-participants">{{count($e->users)}} Participantes</p>
                 <a href="{{route('event.show', $e->id) }}" class="btn btn-primary">Saber mais</a>
-                <form action="{{  route('event.delete', $e->id)  }}" method="post">
-                    @csrf
-                    @method('Delete')
-                    <td><button type="submit" class="btn btn-danger">Excluir </button></td>
-                </form>
+               
             </div>
         </div>
+        
         @endforeach
         @if(count($events) == 0 && $search)
         <p><strong> {{$search}}</strong> não encontrado! <a href="/"> Ver Todos</a> </p>
