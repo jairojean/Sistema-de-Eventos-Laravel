@@ -9,7 +9,6 @@
         <div id="img-container" class="col-md-6"> 
             <img src="/img/events/{{$event->image}}" alt="{{$event->title}}"  class="img-fluid">
         </div>
-
         <div id="info-container" class="col-md-6">
             <h1>{{$event->title}}</h1>
             <p class="event-city">
@@ -40,10 +39,8 @@
                             <ion-icon name="trash-outline"></ion-icon> Sair do Evento.
                         </button>
                     </form>
-            @endif
-           
-
-            <h3>O evento conta com: </h3>
+            @endif   
+      <h3>O evento conta com: </h3>
             <ul id="items-list">
                 @foreach($event->items as $item)
                     <li><ion-icon name="play-outline"></ion-icon> <span>{{$item}}</span></li>
@@ -52,10 +49,8 @@
         </div>
         <div class="col-md-12" id="description-container">
             <h3>Sobre o Evento</h3>
-            <p class="event-description"> {{$event->descrition}}</p>
+            <p class="event-description"> {{$event->description}}</p>
         </div>
     </div>
 </div>
-
-
 @endsection('content')

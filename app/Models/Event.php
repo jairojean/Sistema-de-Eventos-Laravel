@@ -11,8 +11,7 @@ class Event extends Model
 
     protected $dates = ['date'];
     protected $casts= ['items' => 'array'];
-    protected $fillable = ['id','title','descrition','city','district','image','vip','items','date','user_id'];
- 
+    protected $fillable = ['title','description','city','district','image','vip','items','date','user_id'];
     
     public function user(){
         return $this->belongsTo('App\Models\User');
@@ -21,9 +20,6 @@ class Event extends Model
     public function users(){
         return $this->belongsToMany('App\Models\User');
     }
-
     
     protected $guarded = [];
-
-
 }

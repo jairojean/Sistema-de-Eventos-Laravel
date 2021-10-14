@@ -1,17 +1,31 @@
+    /*   General.*/
+    
     * {
         font-family: 'Roboto', Times, serif;
     }
     
     body {
+        /*  Altura de Tela  min-height: 100vh;*/
         min-height: 100vh;
         padding-bottom: 100px;
         position: relative;
+        background-image: linear-gradient(to right, rgb(75, 73, 73), rgb(224, 224, 224));
     }
     
     header {
         background-color: #FFF;
         border-bottom: 1px solid #ccc;
     }
+    
+    h2 {
+        color: #c28008;
+        margin-bottom: 30px;
+        font-weight: 900;
+    }
+    /*  
+    Aqui Temos a o css de nossa session.
+ */
+   
     
     .msg {
         background-color: rgb(122, 224, 62);
@@ -27,31 +41,42 @@
         margin: 0;
     }
     /*  
-    Aqui Alinhamos o menu superior.
+    Aqui Alinhamos o menu superior a navBAr.
  */
+    /*  Barra navegação    */
     
-    #navbar {
-        justify-content: space-between;
-        background-color: #FFF;
+    nav.navbar-transparente {
+        padding: 15px 0px;
+        background: rgb(134, 107, 107);
     }
     
-    #navbar img {
-        width: 50px;
+     .navbar-light .navbar-nav .nav-link{
+        color: white;
     }
     
-    #navbar a {
-        font-size: 14px;
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: rgb(238, 230, 230);
+        background: rgb(85, 5, 5);
+    }
+
+  
+    .navbar-light .navbar-toggler {
+        border-color: rgb(66, 64, 64);
     }
     
-    #navbar a:houver {
-        color: #f2a340;
+    .divisor {
+        margin: 12px 15px;
+        width: 1px;
+        background: white;
     }
-    /*  
-      Aqui temos a imagem do banner com texto busca
- */
+    
+    .capa {
+        text-align: center;
+    }
+    /*  fim  Barra navegação    */
     
     #search-container {
-        background-image: url("../img/eventoCapa.jpg");
+        background-image: url("../img/eventoCapa1.jpg");
         background-size: cover;
         background-position: center;
         height: 300px;
@@ -59,50 +84,46 @@
         text-align: center;
     }
     
-    #search-container h1 {
-        color: #f2a340;
-        margin-bottom: 30px;
-        font-weight: 900;
-    }
-    
+    #search-container h1,
     #search-container form {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
     }
+    /*  
+      Aqui temos a Lista dos eventos 
+ */
     
-    .container-fluid {
-        padding: 0;
+    #events-container #card-container {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
     }
     
-    #events-container {
-        padding: 50px;
+    #events-container h2 {
+        margin-bottom: 30px;
     }
     
-    .events-container .card h2 {
+    #events-container .subtitle {
+        color: #757575;
+        margin-bottom: 30px;
+    }
+    /*  
+     Analisar aqui
+ */
+    
+    #events-container .card h2 {
         margin-bottom: 10px;
+    }
+    
+    .card {
+        margin: 1px;
+        padding: 5px;
     }
     
     .card img {
         max-height: 150px;
         border-top-right-radius: 10px;
-    }
-    
-    .card-container {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #subtitle {
-        color: #757575;
-        margin-bottom: 30px;
-    }
-    
-    .card {
-        flex: 1 1 0;
-        max-width: 25%;
-        border-radius: 10px;
-        padding: 0;
-        margin: 5px;
     }
     
     .card .card-date {
@@ -195,6 +216,7 @@
         list-style: none;
         padding-left: 0;
     }
+    /*  Aqui colocamos lado a lado*/
     
     #items-list li {
         display: flex;

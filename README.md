@@ -8,14 +8,22 @@ Esse sistema foi feito durante o curso de Laravel 8  no youtube pelo Hora de cod
 ```
 Criar um cópia do arquivo env.example para .env (Ambiente de Teste)
 ```
-Esse passo é importante dependendo onde você está rodando o projeto se for local é bom usar o .env 
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Nome-do-banco
+DB_USERNAME=nome-usuario
+DB_PASSWORD=sua-senha 
 
 ```
-php artisan migrate
+Depois de configurar o banco, no terminal rode o comando:  php artisan migrate
+As tabelas serão criadas.
 ```
-
-Executar o comando para rodar a migrations para criação das tabelas no banco de dados.
-
+No terminal rode o comando: php artisan serve
+```
+no navegador acesse: http://localhost:8000 
+```
 Agora só criar o usuário e acessar o sistema.
 
 

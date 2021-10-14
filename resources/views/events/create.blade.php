@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <label for="discrition"> Descrição:</label>
-            <textarea name="descrition" id="descrition"></textarea>
+            <textarea name="description" id="description"></textarea>
         </div>
         <div class="form-group">
             <label for="date"> Data do evento:</label>

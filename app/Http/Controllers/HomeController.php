@@ -20,21 +20,16 @@ class HomeController extends Controller
      */
     
     public function index(){
-        $search = request('search');
-  
-        if($search){
-           $events = Event::where([
-             ['title','like','%'.$search.'%'] 
-           ])->get();
-         
-  
-        }else{
-  
-           $events = Event::all();
-           
-        }
-       
-        return view('welcome', compact('events','search') );
-     }
-     
+          $search = request('search');
+            if($search){
+                $events = Event::where([
+                ['title','like','%'.$search.'%'] 
+                ])->orWhere([
+                ['city','like','%'.$search.'%']   
+                ])->get();  
+            }else{
+                    $events = Event::all();     
+            }
+              return view('welcome', compact('events','search') );
+     }  
 }
