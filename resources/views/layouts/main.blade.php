@@ -78,58 +78,6 @@
                 </div>
             </div>
         </nav>
-
-
-
-<!--
-
-
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbar">
-                <a href="/" class="nav bar-brand">
-                    <img src="/img/cervejaLogo.jpeg" alt="logo">
-                </a>
-
-                <!--Oque faz o menu ficar alinhado é o atributo 'nav-bar'
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('event.index') }}">Eventos</a>
-                    </li>
-                 @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home">Meu Painel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('event.create') }}">Criar Evento</a>
-                    </li>
-                    <li>
-                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();">
-                         Sair
-                    </a>
-                    </li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                 @endauth
-                    
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Entrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Cadastrar</a>
-                    </li>
-                @endguest
-                </ul>
-            </div>
-        </nav>  -->
     </header>
     <main >
         <div class="container">
