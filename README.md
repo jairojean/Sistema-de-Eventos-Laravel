@@ -28,12 +28,5 @@ Agora só criar o usuário e acessar o sistema.
 
 
 
-## O sistema consiste em utilizar seguintes telas
-
-* CRUD completo para o Evento
-* Listagem com filtros.
-* Restrição para acessar o sistema.
-*Salvar 'items' do evento no formato JsoN.
- 
 
 
